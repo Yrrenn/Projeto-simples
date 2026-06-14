@@ -29,16 +29,25 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             width: 300px;
+            transition: transform 0.4s ease;
+
+        }
+
+        .login-box:hover {
+
+            transform: translateY(-5px);
+
         }
 
 
 		.logo {
+
   		display: block;
     		margin: 0 auto 20px auto; 
-    		width: 50%;             
+    		width: 65%;             
     		height: auto; 
             
-}
+        }
 
 
         h2 {
@@ -55,10 +64,22 @@
             box-sizing: border-box;
         }
 
+        
+
+            input:focus{
+
+                outline: none;
+                border-color: #046d16;
+                box-shadow: 0 0 5px rgba(4, 109, 22, 0.5);
+                        
+            }
+
+
+
         button {
             width: 100%;
             padding: 10px;
-            background-color: #007BFF;
+            background-color: #219909;
             color: white;
             border: none;
             border-radius: 5px;
@@ -66,7 +87,7 @@
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #046d16;
         }
 
         .evento {
@@ -74,6 +95,18 @@
             color: #666;
             margin-bottom: 15px;
         }
+
+
+        
+
+        .mensagem {
+
+            text-align: center;
+             margin-top: 15px;
+            font-weight: bold;
+
+            }
+
     </style>
 </head>
 <body>
@@ -83,17 +116,39 @@
 	<img src="https://duedigital.com.br/wp-content/uploads/2016/02/LOGO-FASIPE.png"
      alt="Logo FASIPE"
      class="logo"
-     width="100"
      >
 
         <h2>Login</h2>
-        <div class="evento">Evento da Faculdade</div>
+        <div class="evento">Carreata FASIPE</div>
 
-        <form>
-            <input type="text" placeholder="Usuário" required>
-            <input type="password" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
-        </form>
+
+        <!-- Formulário de login -->
+<form>
+
+    <!-- Campo para o usuário -->
+
+    <input type="text" placeholder="Usuário" required>
+
+   <!-- Campo para a senha -->
+    <input type="password" placeholder="Senha" required>
+
+     <!-- Ao clicar no botão, chama a função entrar -->
+    <button type="button" onclick="entrar()">Entrar</button>
+
+</form>
+
+<script>
+
+    // Cria a função entrar()
+    function entrar() {
+
+        // Exibe uma mensagem na tela
+        alert("Login realizado com sucesso!");
+
+    }
+
+</script>
+
     </div>
 
 </body>
