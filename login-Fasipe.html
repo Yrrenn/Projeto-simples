@@ -1,18 +1,13 @@
+```html
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Login do particpante - CARREATA FASIPE </title>
-
+    <title>Login do Participante - CARREATA FASIPE</title>
 
     <style>
-
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f2f5;
@@ -27,54 +22,47 @@
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
             transition: transform 0.4s ease;
-
         }
 
         .login-box:hover {
-
             transform: translateY(-5px);
-
         }
 
-
-		.logo {
-
-  		display: block;
-    		margin: 0 auto 20px auto; 
-    		width: 65%;             
-    		height: auto; 
-            
+        .logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 65%;
+            height: auto;
         }
-
 
         h2 {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+        .evento {
+            text-align: center;
+            color: #666;
+            margin-bottom: 15px;
         }
 
         input {
             width: 100%;
             padding: 10px;
-            margin: 8px 0;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
         }
 
-        
-
-            input:focus{
-
-                outline: none;
-                border-color: #046d16;
-                box-shadow: 0 0 5px rgba(4, 109, 22, 0.5);
-                        
-            }
-
-
+        input:focus {
+            outline: none;
+            border-color: #046d16;
+            box-shadow: 0 0 5px rgba(4, 109, 22, 0.5);
+        }
 
         button {
             width: 100%;
@@ -90,66 +78,47 @@
             background-color: #046d16;
         }
 
-        .evento {
-            text-align: center;
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-
-        
-
         .mensagem {
-
             text-align: center;
-             margin-top: 15px;
+            margin-top: 15px;
             font-weight: bold;
-
-            }
-
+        }
     </style>
 </head>
+
 <body>
 
     <div class="login-box">
 
-	<img src="https://duedigital.com.br/wp-content/uploads/2016/02/LOGO-FASIPE.png"
-     alt="Logo FASIPE"
-     class="logo"
-     >
+        <img src="https://duedigital.com.br/wp-content/uploads/2016/02/LOGO-FASIPE.png"
+            alt="Logo FASIPE"
+            class="logo">
 
         <h2>Login</h2>
+
+        <div class="evento">Evento da Faculdade</div>
         <div class="evento">Carreata FASIPE</div>
 
+        <form>
+            <input type="text" placeholder="Usuário" required>
 
-        <!-- Formulário de login -->
-<form>
+            <input type="password" placeholder="Senha" required>
 
-    <!-- Campo para o usuário -->
+            <button type="button" onclick="entrar()">Entrar</button>
+        </form>
 
-    <input type="text" placeholder="Usuário" required>
-
-   <!-- Campo para a senha -->
-    <input type="password" placeholder="Senha" required>
-
-     <!-- Ao clicar no botão, chama a função entrar -->
-    <button type="button" onclick="entrar()">Entrar</button>
-
-</form>
-
-<script>
-
-    // Cria a função entrar()
-    function entrar() {
-
-        // Exibe uma mensagem na tela
-        alert("Login realizado com sucesso!");
-
-    }
-
-</script>
+        <div class="mensagem" id="mensagem"></div>
 
     </div>
 
+    <script>
+        function entrar() {
+            document.getElementById("mensagem").innerHTML =
+                "Login realizado com sucesso!";
+        }
+    </script>
+
 </body>
+
 </html>
+```
